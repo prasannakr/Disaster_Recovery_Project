@@ -36,28 +36,6 @@ python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
 python run.py<br/>
 4) URL to see visualization<br/>
 https://view6914b2f4-3001.udacity-student-workspaces.com/<br/>
-5) Steps used to deploy in Heroku<br/>
-a) Create a directory: mkdir disaster_response_app<br/>
-b) Move files to above directory: mv -t disaster_response_app app data models DisasterResponse.db <br/>
-c) Updata python(if not latest version): conda install python<br/>
-d) Create Virtual Environment: python3.5 -m venv disastervenv<br/>
-e) Activate above: source disastervenv/bin/activate<br/>
-f) Move to the directory: cd disaster_response_app<br/>
-g) Install required packages: pip install flask pandas plotly gunicorn<br/>
-h) Get Heroku CLI: curl https://cli-assets.heroku.com/install-ubuntu.sh | sh<br/>
-i) Login to Heroku: heroku login -i<br/>
-j) Comment out app.run() in run.py file<br/>
-k) Create Procfile: touch Procfile<br/>
-l) Open Procfile and type: web gunicorn run:app<br/>
-m) Create requirements file: pip3 freeze > requirements.txt<br/>
-n) Git commands:<br/>
-i> git init<br/>
-ii> heroku git:remote -a krp-disaster-response-app<br/>
-iii> git add .<br/>
-iv> git commit -am "make it better"<br/>
-v) git remote -v<br/>
-vi> git push heroku master<br/>
-o) Link to access app - https://krp-disaster-response-app.herokuapp.com/<br/>
 
 
 ## **Libraries Used**<br/>
