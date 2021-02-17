@@ -25,8 +25,8 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.naive_bayes import BernoulliNB
-import models.workspace_utils
-from workspace_utils import active_session
+#from models import workspace_utils
+#from workspace_utils import active_session
 
 
 def load_data(database_filepath = 'DisasterResponse.db', table_name = 'Messages', column_name='message'):
