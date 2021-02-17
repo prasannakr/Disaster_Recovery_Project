@@ -35,7 +35,7 @@ python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
 3) To run web app in the app's directory<br/>
 python run.py<br/>
 4) URL to see visualization<br/>
-https://view6914b2f4-3001.udacity-student-workspaces.com/<br/>
+http://localhost:3001/<br/>
 
 
 ## **Libraries Used**<br/>
@@ -53,9 +53,14 @@ scikit-learn<br/>
 
 ## **Results**<br/>
 End result is a web app powered by supervised machine learning model (LinearSVC) which:<br/>
-A) Accepts a text message<br/>
-B) Categorizes text message into appropriate groups<br/>
-C) Few visualizations(bar charts) like Distribution of Message Genres/Distribution of Message Categories/Top words<br/>
+A) Contains Visualizations
+B) When a message is entered, classfies into different groups.
+Ex: Type:  we are more than 50 people on the street. Please help us find tent and food & Click "Classify Message" Button
+
+![Screenshot](Classifying_text.jpg)
+![Screenshot](Viz2.jpg)
+![Screenshot](Viz3.jpg)
+![Screenshot](Viz1.jpg)
 
 ## **Licensing, Acknowledgements**<br/>
 Thanks to real life disaster messages data from Figure Eight.<br/>
