@@ -41,11 +41,14 @@ def tokenize(text):
     return lemmed
 
 # Load Data
-engine = create_engine('sqlite:////home/workspace/data/DisasterResponse.db')
+#engine = create_engine('sqlite:////home/workspace/data/DisasterResponse.db')
+#engine = create_engine('sqlite:////C/1DATA/Prasanna/Udacity/dis_pipe/Workspace/data/DisasterResponse.db')
+engine = create_engine('sqlite:///../data/DisasterResponse.db')
 df = pd.read_sql_table('Messages', engine)
     
 # load modelDisasterResponse.db
-model = joblib.load('/home/workspace/models/classifier.pkl')
+#model = joblib.load('/home/workspace/models/classifier.pkl')
+model = joblib.load('../models/classifier.pkl')
     
 # index webpage displays cool visuals and receives user input text for model
 @app.route('/')
