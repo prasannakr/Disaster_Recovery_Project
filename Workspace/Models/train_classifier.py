@@ -47,7 +47,7 @@ def load_data(database_filepath = 'DisasterResponse.db', table_name = 'Messages'
 def tokenize(text):
     '''
     This function accepts text message as input.
-    Then normalize the text, remove punctuation, tokenize, remove stop words, reduce words to their stem & then to their root form
+    Then normalize the text, remove punctuation, tokenize, remove stop words, reduce words to their root form
     '''
 
     #Normalize text & remove punctuation
@@ -59,13 +59,10 @@ def tokenize(text):
     stop_words = stopwords.words("english")
     words = [w for w in tokens if w not in stop_words]
         
-    # Reduce words to their stems
-    stemmer = PorterStemmer()
-    stemmed = [stemmer.stem(w) for w in words]
-    
+   
     # Reduce words to their root form
     lemmatizer = WordNetLemmatizer()
-    lemmed = [lemmatizer.lemmatize(w) for w in stemmed]
+    lemmed = [lemmatizer.lemmatize(w) for w in words]
     
     return lemmed    
 
