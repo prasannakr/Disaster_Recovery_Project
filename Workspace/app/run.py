@@ -30,13 +30,10 @@ def tokenize(text):
     stop_words = stopwords.words("english")
     words = [w for w in tokens if w not in stop_words]
         
-    # Reduce words to their stems
-    stemmer = PorterStemmer()
-    stemmed = [stemmer.stem(w) for w in words]
-    
+
     # Reduce words to their root form
     lemmatizer = WordNetLemmatizer()
-    lemmed = [lemmatizer.lemmatize(w) for w in stemmed]
+    lemmed = [lemmatizer.lemmatize(w) for w in words]
   
     return lemmed
 
