@@ -70,7 +70,7 @@ def build_model():
     '''
     This machine pipeline should take in the message column as input and output classification results on the other 36 categories in the dataset
     '''
-    pipeline = Pipeline([('vectorizer', CountVectorizer()),
+    pipeline = Pipeline([('vectorizer', CountVectorizer(tokenizer=tokenize)),
                      ('tfidf', TfidfTransformer()),
                      ('clf', OneVsRestClassifier(LinearSVC(class_weight='balanced')))])
     
